@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "ckpt_name": "v1-5-pruned.ckpt"
+      "ckpt_name": "aniverse_thxEd14Pruned.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -10,7 +10,7 @@
   },
   "4": {
     "inputs": {
-      "text": "a dragon fly sits on the grass",
+      "text": "a cute monster",
       "clip": [
         "3",
         1
@@ -23,7 +23,7 @@
   },
   "5": {
     "inputs": {
-      "text": "a dog sits on the grass",
+      "text": "text , watermark , nsfw ,nude,horror ,zombie",
       "clip": [
         "3",
         1
@@ -36,10 +36,10 @@
   },
   "6": {
     "inputs": {
-      "seed": 1030998859277729,
-      "steps": 12,
-      "cfg": 8,
-      "sampler_name": "euler",
+      "seed": 3,
+      "steps": 8,
+      "cfg": 6.5,
+      "sampler_name": "euler_ancestral",
       "scheduler": "normal",
       "denoise": 1,
       "model": [
@@ -75,18 +75,6 @@
       "title": "Empty Latent Image"
     }
   },
-  "8": {
-    "inputs": {
-      "images": [
-        "10",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
   "10": {
     "inputs": {
       "samples": [
@@ -101,6 +89,19 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "VAE Decode"
+    }
+  },
+  "11": {
+    "inputs": {
+      "filename_prefix": "test_api",
+      "images": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   }
 }
